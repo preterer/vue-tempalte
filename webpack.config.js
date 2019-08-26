@@ -4,7 +4,6 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
   entry: "./src/index.ts",
-  watch: true,
   output: {
     path: path.resolve(__dirname, "./dist"),
     publicPath: "/dist/",
