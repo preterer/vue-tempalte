@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const DotenvPlugin = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.ts",
@@ -66,7 +67,8 @@ module.exports = {
   devtool: "#eval-source-map",
   plugins: [
     // make sure to include the plugin for the magic
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new DotenvPlugin()
   ]
 };
 
