@@ -20,6 +20,17 @@ class AuthService {
   }
 
   /**
+   * Is user authorized
+   *
+   * @readonly
+   * @type {boolean}
+   * @memberof AuthService
+   */
+  public get isAuthorized(): boolean {
+    return !!this.token;
+  }
+
+  /**
    * Loggs user in
    *
    * @param {LoginData} loginData
