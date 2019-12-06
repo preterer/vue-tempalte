@@ -12,5 +12,21 @@
       ""
     ],
     "description": "View"
+  },
+  "Route": {
+    "prefix": "route",
+    "body": [
+      "import { RouteConfig } from \"vue-router\";",
+      "",
+      "import { $1 } from \"../../views/$2/$1\";",
+      "",
+      "export const $2Route: RouteConfig = {",
+      "  name: \"$2\",",
+      "  path: \"$3\",",
+      "  component: $1",
+      "};",
+      ""
+    ],
+    "description": "Route"
   }
 }
