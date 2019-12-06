@@ -1,5 +1,4 @@
 import Component, { mixins } from "vue-class-component";
-import { validationMixin } from "vuelidate";
 
 import { Events } from "../../enums/events.enum";
 import { LoginData, loginDataValidation } from "../../interfaces/loginData";
@@ -10,7 +9,7 @@ import { validationService } from "../../services/validation.service";
 import { VInput } from "../validation/vinput/VInput";
 import template from "./Login.html";
 
-@Component({ components: { VInput }, mixins: [validationMixin], template })
+@Component({ components: { VInput }, template })
 export class Login extends mixins(ValidationMixin) {
   /**
    * Login data model
