@@ -1,9 +1,9 @@
-import Vue from "vue";
-import Component from "vue-class-component";
+import Component, { mixins } from "vue-class-component";
 import { validationMixin } from "vuelidate";
 
 import { Events } from "../../enums/events.enum";
 import { LoginData, loginDataValidation } from "../../interfaces/loginData";
+import { ValidationMixin } from "../../mixins/validationMixin";
 import { authService } from "../../services/auth.service";
 import { handleError } from "../../services/errorHandler.service";
 import { validationService } from "../../services/validation.service";
@@ -11,10 +11,9 @@ import template from "./Login.html";
 
 @Component({
   template,
-  mixins: [validationMixin],
-  validations: { model: loginDataValidation }
+  mixins: [validationMixin]
 })
-export class Login extends Vue {
+export class Login extends mixins(ValidationMixin) {
   /**
    * Login data model
    *
@@ -26,13 +25,16 @@ export class Login extends Vue {
     password: ""
   };
 
+  public get validations() {
+    return { model: loginDataValidation };
+  }
+
   /**
    * Loggs person in
    *
    * @memberof Login
    */
   public login() {
-    console.log(":< ", this, this.$v);
     validationService
       .validate(this.$v)
       .then(() => authService.login(this.model))
