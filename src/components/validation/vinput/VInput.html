@@ -1,0 +1,11 @@
+<div class="input">
+  <input
+    v-model="model.$model"
+    v-bind="$attrs"
+    class="form-control"
+    :class="errorClass"
+    @blur="touch"
+  />
+
+  <VErrors v-if="touched || model.$dirty" :model="model" />
+</div>
