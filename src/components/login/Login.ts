@@ -9,6 +9,13 @@ import { validationService } from "../../services/validation.service";
 import { VInput } from "../validation/vinput/VInput";
 import template from "./Login.html";
 
+/**
+ * Login component
+ *
+ * @export
+ * @class Login
+ * @extends {mixins(ValidationMixin)}
+ */
 @Component({ components: { VInput }, template })
 export class Login extends mixins(ValidationMixin) {
   /**
