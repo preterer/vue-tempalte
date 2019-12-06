@@ -1,9 +1,9 @@
 import { RouteConfig } from "vue-router";
 
-import { Login } from "../../../views/login/Login";
+import { LoginView } from "../../../views/login/LoginView";
 
 export const loginRoute: RouteConfig = {
   name: "login",
   path: "/login",
-  component: Login
+  component: LoginView
 };
