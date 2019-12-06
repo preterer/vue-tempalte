@@ -6,6 +6,11 @@
 npm install
 ```
 
+## Environment variables
+
+- `API_URL` - URL of the API to call
+- `TOKEN_KEY` - localStorage token key
+
 ### Development server
 
 ```
