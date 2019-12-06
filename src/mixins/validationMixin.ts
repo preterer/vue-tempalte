@@ -18,6 +18,13 @@ import { validationMixin } from "vuelidate";
   }
 })
 export class ValidationMixin extends Vue {
+  /**
+   * Validations object
+   *
+   * @readonly
+   * @type {*}
+   * @memberof ValidationMixin
+   */
   public get validations(): any {
     return {};
   }
