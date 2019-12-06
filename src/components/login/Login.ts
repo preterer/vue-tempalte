@@ -7,12 +7,10 @@ import { ValidationMixin } from "../../mixins/validationMixin";
 import { authService } from "../../services/auth.service";
 import { handleError } from "../../services/errorHandler.service";
 import { validationService } from "../../services/validation.service";
+import { VInput } from "../validation/vinput/VInput";
 import template from "./Login.html";
 
-@Component({
-  template,
-  mixins: [validationMixin]
-})
+@Component({ components: { VInput }, mixins: [validationMixin], template })
 export class Login extends mixins(ValidationMixin) {
   /**
    * Login data model
@@ -25,6 +23,12 @@ export class Login extends mixins(ValidationMixin) {
     password: ""
   };
 
+  /**
+   * Validation model
+   *
+   * @readonly
+   * @memberof Login
+   */
   public get validations() {
     return { model: loginDataValidation };
   }
