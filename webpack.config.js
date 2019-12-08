@@ -58,10 +58,7 @@ module.exports = {
     }
   },
   devServer: {
-    contentBase: [
-      path.join(__dirname, "public"),
-      path.join(__dirname, "public", "img")
-    ],
+    contentBase: path.join(__dirname, "public"),
     port: 9000
   },
   performance: {
