@@ -1,0 +1,21 @@
+.language-picker .btn {
+  width: 60px;
+}
+
+.language-picker .dropdown-menu {
+  min-width: 60px;
+}
+
+.language-picker .dropdown-menu .dropdown-item {
+  padding: 0px 25%;
+}
+
+.language-picker .dropdown-menu {
+  display: block;
+}
+
+.language-picker .flag {
+  height: 20px;
+  width: 25px;
+  vertical-align: text-bottom;
+}
