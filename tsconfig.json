@@ -9,6 +9,8 @@
     "target": "es6",
     "experimentalDecorators": true,
     "declaration": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "#/*": ["src/*"]

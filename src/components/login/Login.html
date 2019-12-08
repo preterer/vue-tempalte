@@ -1,16 +1,16 @@
 <div class="card">
   <form @submit.prevent="login">
     <div class="card-body">
-      <h2 class="card-title text-center">Login</h2>
+      <h2 class="card-title text-center">{{ $t('login.title') }}</h2>
 
       <div class="form-group">
-        <label>Login</label>
+        <label>{{ $t('login.label') }}</label>
 
         <VInput :model="$v.model.login" />
       </div>
 
       <div class="form-group">
-        <label>Password</label>
+        <label>{{ $t('password.label') }}</label>
 
         <VInput :model="$v.model.password" type="password" />
       </div>
@@ -19,7 +19,7 @@
     <div class="card-footer">
       <div class="row">
         <div class="col-12">
-          <btn class="btn-primary float-right" text="Login" />
+          <btn class="btn-primary float-right" :text="$t('login.button')" />
         </div>
       </div>
     </div>
