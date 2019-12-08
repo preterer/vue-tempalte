@@ -10,6 +10,8 @@ npm install
 
 - `API_URL` - URL of the API to call
 - `TOKEN_KEY` - localStorage token key
+- `LOCALE_KEY` - localStorage locale key
+- `DEFAULT_LOCALE` - default locale setting
 
 ### Development server
 

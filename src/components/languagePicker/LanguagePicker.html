@@ -1,0 +1,25 @@
+<div class="dropup language-picker">
+  <button
+    class="btn btn-secondary dropdown-toggle"
+    aria-haspopup="true"
+    aria-expanded="false"
+    @click="toggleMenu"
+  >
+    <img class="flag" :src="selectedLocale.svgPath" />
+  </button>
+
+  <div
+    v-if="isMenuVisible"
+    class="dropdown-menu"
+    aria-labelledby="dropdownMenuButton"
+  >
+    <a
+      v-for="(locale, index) in availableLocales"
+      :key="'locale_' + index"
+      class="dropdown-item"
+      @click="selectLocale(locale)"
+    >
+      <img class="flag" :src="locale.svgPath" />
+    </a>
+  </div>
+</div>
