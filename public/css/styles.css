@@ -1,3 +1,13 @@
+a {
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+}
+
 input.error {
   border-color: red;
 }
@@ -5,4 +15,18 @@ input.error {
 .input .errors {
   color: red;
   font-size: 0.7em;
+}
+
+.language-picker .btn {
+  width: 120px;
+}
+
+.language-picker .dropdown-menu {
+  display: block;
+}
+
+.language-picker .flag {
+  height: 20px;
+  width: 25px;
+  vertical-align: text-bottom;
 }
