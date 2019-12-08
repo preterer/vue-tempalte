@@ -6,6 +6,7 @@ footer {
   position: fixed;
   bottom: 0;
   height: 50px;
+  width: 100%;
 }
 
 input.error {
@@ -18,7 +19,15 @@ input.error {
 }
 
 .language-picker .btn {
-  width: 120px;
+  width: 60px;
+}
+
+.language-picker .dropdown-menu {
+  min-width: 60px;
+}
+
+.language-picker .dropdown-menu .dropdown-item {
+  padding: 0px 25%;
 }
 
 .language-picker .dropdown-menu {

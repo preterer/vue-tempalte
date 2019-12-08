@@ -6,8 +6,6 @@
     @click="toggleMenu"
   >
     <img class="flag" :src="selectedLocale.svgPath" />
-
-    <span>{{ selectedLocale.title }}</span>
   </button>
 
   <div
@@ -22,8 +20,6 @@
       @click="selectLocale(locale)"
     >
       <img class="flag" :src="locale.svgPath" />
-
-      <span>{{ locale.title }}</span>
     </a>
   </div>
 </div>
