@@ -1,4 +1,4 @@
-# auth-vue
+# zrzutka-front
 
 ## Project setup
 
