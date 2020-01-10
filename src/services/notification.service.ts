@@ -1,4 +1,5 @@
 import Vue from "vue";
+import { i18n } from "..";
 
 /**
  * Notifications service
@@ -15,8 +16,12 @@ export class NotificationService {
    * @param {string} [text]
    * @memberof NotificationService
    */
-  public notify(type: string, title?: string, text?: string): void {
-    Vue.notify({ text, title, type });
+  public notify(type: string, title: string, text?: string): void {
+    Vue.notify({
+      text: text ? i18n.t(text).toString() : undefined,
+      title: i18n.t(title).toString(),
+      type
+    });
   }
 
   /**
@@ -26,7 +31,7 @@ export class NotificationService {
    * @param {string} [text]
    * @memberof NotificationService
    */
-  public success(title?: string, text?: string): void {
+  public success(title: string, text?: string): void {
     this.notify("success", title, text);
   }
 
@@ -37,7 +42,7 @@ export class NotificationService {
    * @param {string} [text]
    * @memberof NotificationService
    */
-  public error(title?: string, text?: string): void {
+  public error(title: string, text?: string): void {
     this.notify("error", title, text);
   }
 
@@ -48,7 +53,7 @@ export class NotificationService {
    * @param {string} [text]
    * @memberof NotificationService
    */
-  public warn(title?: string, text?: string): void {
+  public warn(title: string, text?: string): void {
     this.notify("warning", title, text);
   }
 }

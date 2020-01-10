@@ -5,5 +5,5 @@
  * @enum {number}
  */
 export enum Errors {
-  VALIDATION_ERROR = "Invalid form data."
+  VALIDATION_ERROR = "errors.validation_error"
 }

@@ -30,7 +30,7 @@ export class ErrorHandlerService {
    * @memberof ErrorHandlerService
    */
   private handleHttpError(error: AxiosError): void {
-    notificationService.error(error.response && error.response.data);
+    notificationService.error(error.response?.data);
   }
 }
 

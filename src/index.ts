@@ -16,7 +16,7 @@ Vue.use(VueRouter);
 Vue.use(VueNotification);
 Vue.component("btn", Btn);
 
-const i18n = new VueI18n({
+export const i18n = new VueI18n({
   locale: localStorage.getItem(config.localeStorageKey) || config.defaultLocale,
   messages
 });
