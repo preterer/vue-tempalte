@@ -19,6 +19,6 @@ export class LoginView extends Vue {
    * @memberof Login
    */
   public redirectHome() {
-    this.$router.push({ name: "home" });
+    this.$router.push({ name: "fundraisers" });
   }
 }
