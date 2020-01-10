@@ -24,7 +24,7 @@ export class VErrors extends Vue {
    * @memberof VErrors
    */
   @Prop({ required: false, type: Object })
-  public messages!: { [key: string]: string };
+  public messages?: { [key: string]: string };
 
   /**
    * Gets first of the errors to display
@@ -39,8 +39,6 @@ export class VErrors extends Vue {
     }
     return Object.keys(this.model)
       .filter(key => !key.startsWith("$") && this.model[key] === false)
-      .map(
-        key => (this.messages && this.messages[key]) || ValidationMessages[key]
-      )[0];
+      .map(key => this.messages?.[key] || ValidationMessages[key])[0];
   }
 }

@@ -6,5 +6,5 @@
  * @enum {number}
  */
 export const ValidationMessages: { [key: string]: string } = {
-  required: "Field is required."
+  required: "validation.required"
 };
