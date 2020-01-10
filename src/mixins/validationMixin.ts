@@ -12,9 +12,8 @@ import { validationMixin } from "vuelidate";
  */
 @Component({
   mixins: [validationMixin],
-  validations: function() {
-    const self = (this as any) as ValidationMixin;
-    return self.validations;
+  validations: function(this: ValidationMixin) {
+    return this.validations;
   }
 })
 export class ValidationMixin extends Vue {
