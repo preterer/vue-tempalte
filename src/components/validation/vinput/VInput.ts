@@ -23,13 +23,22 @@ export class VInput extends Vue {
   public model!: Validation;
 
   /**
+   * Input title
+   *
+   * @type {string}
+   * @memberof VInput
+   */
+  @Prop({ required: false, type: String })
+  public title?: string;
+
+  /**
    * Custom validation messages
    *
    * @type {{ [key: string]: string }}
    * @memberof VInput
    */
   @Prop({ required: false, type: Object })
-  public messages!: { [key: string]: string };
+  public messages?: { [key: string]: string };
 
   /**
    * Is field touched
