@@ -7,7 +7,7 @@ import { loginResource } from "../resources/login.resource";
  *
  * @class AuthService
  */
-class AuthService {
+export class AuthService {
   /**
    * User token getter
    *
