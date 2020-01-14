@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <tr>
+      <Heading
+        v-for="(column, index) in columns"
+        :key="'list_header_' + index"
+        :column="column"
+        :sorting="sorting"
+        @sort="$emit('sort', $event)"
+      />
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr v-for="(item, index) in data.list" :key="'list_row_' + index">
+      <td
+        v-for="(column, columnIndex) in columns"
+        :key="'list_row_' + index + '_column_' + columnIndex"
+        :class="column.rowClass"
+      >
+        {{ column.valueGetter(item) }}
+      </td>
+    </tr>
+  </tbody>
+</table>

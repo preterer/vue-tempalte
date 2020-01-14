@@ -1,0 +1,11 @@
+<th class="text-left" :class="column.headerClass" :width="column.width">
+  <a @click="sort(column)">
+    <span>{{ column.heading }}</span>
+
+    <i
+      v-if="sorting.order === column.sort"
+      class="fas"
+      :class="sortIconClass(column)"
+    />
+  </a>
+</th>
